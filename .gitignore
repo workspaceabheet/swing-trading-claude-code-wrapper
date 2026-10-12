@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Virtual environment
+.venv/
+
+# Test / lint caches
+.pytest_cache/
+.ruff_cache/
+
+# Local data (DB lives outside the repo by default at ~/.swingtrade, but
+# ignore defensively in case SWINGTRADE_DATA_DIR ever points inside the repo)
+*.db
+*.sqlite3
+
+# OS
+.DS_Store

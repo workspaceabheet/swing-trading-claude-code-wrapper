@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swing Trade Ideas — History</title>
+  <link rel="stylesheet" href="/static/css/main.css" />
+</head>
+<body>
+  <nav class="app-nav">
+    <a href="/">Latest run</a>
+    <a href="/history">History</a>
+  </nav>
+  <main class="container">
+    <div id="history-list-view">
+      <h1>Past runs</h1>
+      <div id="history-rows"></div>
+    </div>
+    <div id="history-detail-view" hidden>
+      <button id="back-to-list" class="back-button">&larr; Back to list</button>
+      <div id="history-detail-meta" class="history-detail-meta"></div>
+      <div class="grid" id="history-detail-ideas"></div>
+      <footer id="history-disclaimer" class="disclaimer" hidden></footer>
+    </div>
+  </main>
+
+  <template id="run-row-template">
+    <div class="history-row">
+      <div class="history-row-header">
+        <span class="history-row-id"></span>
+        <span class="history-row-status"></span>
+      </div>
+      <div class="history-row-meta">
+        <span class="history-row-started"></span>
+        <span class="history-row-finished"></span>
+        <span class="history-row-cost"></span>
+        <span class="history-row-skip" hidden>⊘ Quick-sweep skipped</span>
+      </div>
+    </div>
+  </template>
+
+  <template id="idea-card-template">
+    <article class="idea-card">
+      <div class="idea-card-header">
+        <span class="idea-ticker"></span>
+        <span class="idea-tier"></span>
+      </div>
+      <dl class="idea-stats">
+        <div><dt>Entry</dt><dd class="idea-entry"></dd></div>
+        <div><dt>Target</dt><dd class="idea-target"></dd></div>
+        <div><dt>Hold</dt><dd class="idea-hold"></dd></div>
+      </dl>
+      <p class="idea-rationale"></p>
+      <a class="idea-citation" href="#" target="_blank" rel="noopener noreferrer">Source</a>
+      <p class="idea-low-confidence-label" hidden>⚠ Low confidence — backfilled (red-tier, fewer than 10 higher-confidence ideas were found this run)</p>
+    </article>
+  </template>
+
+  <script src="/static/js/api.js"></script>
+  <script src="/static/js/cards.js"></script>
+  <script src="/static/js/history.js"></script>
+</body>
+</html>

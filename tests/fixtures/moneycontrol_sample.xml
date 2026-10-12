@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>Moneycontrol Business News</title>
+  <link>https://www.moneycontrol.com/rss/business.xml</link>
+  <description>Sample fixture feed for tests</description>
+  <item>
+    <title>Reliance Industries shares surge on Q2 earnings beat</title>
+    <link>https://www.moneycontrol.com/news/business/reliance-q2-earnings-1.html</link>
+    <description>Reliance Industries posted a strong quarter.</description>
+    <pubDate>Mon, 06 Oct 2025 09:15:00 +0530</pubDate>
+  </item>
+  <item>
+    <title>TCS wins large deal from European bank</title>
+    <link>https://www.moneycontrol.com/news/business/tcs-deal-2.html</link>
+    <description>&lt;p&gt;TCS &lt;b&gt;announced&lt;/b&gt; a multi-year deal...&lt;/p&gt;</description>
+    <pubDate>Mon, 06 Oct 2025 10:30:00 +0530</pubDate>
+  </item>
+  <item>
+    <title>Infosys guidance raised for FY26</title>
+    <link>https://www.moneycontrol.com/news/business/infosys-guidance-3.html</link>
+    <description>Infosys raised its revenue growth guidance for the fiscal year citing strong deal wins and continued momentum in digital transformation engagements across its largest client verticals, including banking, financial services, insurance, retail, manufacturing, and healthcare, as it looks to close out the year on a stronger footing than previously expected by most analysts tracking the stock.</description>
+    <pubDate>Mon, 06 Oct 2025 11:45:00 +0530</pubDate>
+  </item>
+  <item>
+    <title>HDFC Bank announces new branch expansion plan</title>
+    <link>https://www.moneycontrol.com/news/business/hdfc-branches-4.html</link>
+    <description>HDFC Bank to open 500 new branches this year.</description>
+    <pubDate>Mon, 06 Oct 2025 12:00:00 +0530</pubDate>
+  </item>
+</channel>
+</rss>

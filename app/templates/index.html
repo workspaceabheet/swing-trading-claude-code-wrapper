@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swing Trade Ideas</title>
+  <link rel="stylesheet" href="/static/css/main.css" />
+</head>
+<body>
+  <nav class="app-nav">
+    <a href="/">Latest run</a>
+    <a href="/history">History</a>
+  </nav>
+  <main class="container">
+    <header class="app-header">
+      <div class="app-header-text">
+        <h1>Swing Trade Ideas</h1>
+        <p class="app-subtitle">Personal research aid — NSE/BSE, up to 10 ideas per run</p>
+      </div>
+      <button id="run-btn" type="button">Run now</button>
+    </header>
+
+    <div id="status-area" class="status-area" aria-live="polite"></div>
+    <div id="notice-area" class="notice-area" aria-live="polite"></div>
+    <div id="cost-area" class="cost-area"></div>
+
+    <section id="ideas-area" class="ideas-area"></section>
+
+    <section id="sources-section" class="sources-section" hidden>
+      <h2>Sources seen</h2>
+      <p id="failed-sources-notice" class="failed-sources-notice" hidden></p>
+      <div id="sources-groups"></div>
+    </section>
+
+    <footer id="disclaimer" class="disclaimer" hidden></footer>
+  </main>
+
+  <template id="source-group-template">
+    <div class="source-group">
+      <h3 class="source-group-label"></h3>
+      <ul class="sources-list"></ul>
+    </div>
+  </template>
+
+  <template id="source-item-template">
+    <li class="source-item">
+      <a class="source-headline" href="#" target="_blank" rel="noopener noreferrer"></a>
+      <div class="source-meta">
+        <span class="source-published"></span>
+      </div>
+      <p class="source-snippet"></p>
+    </li>
+  </template>
+
+  <template id="idea-card-template">
+    <article class="idea-card">
+      <div class="idea-card-header">
+        <span class="idea-ticker"></span>
+        <span class="idea-tier"></span>
+      </div>
+      <dl class="idea-stats">
+        <div><dt>Entry</dt><dd class="idea-entry"></dd></div>
+        <div><dt>Target</dt><dd class="idea-target"></dd></div>
+        <div><dt>Hold</dt><dd class="idea-hold"></dd></div>
+      </dl>
+      <p class="idea-rationale"></p>
+      <a class="idea-citation" href="#" target="_blank" rel="noopener noreferrer">Source</a>
+      <p class="idea-low-confidence-label" hidden>⚠ Low confidence — backfilled (red-tier, fewer than 10 higher-confidence ideas were found this run)</p>
+    </article>
+  </template>
+
+  <script src="/static/js/api.js"></script>
+  <script src="/static/js/cards.js"></script>
+  <script src="/static/js/run.js"></script>
+</body>
+</html>

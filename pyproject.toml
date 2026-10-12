@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "swingtrade"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi==0.142.2",
+    "uvicorn[standard]==0.54.0",
+    "jinja2==3.1.6",
+    "pydantic==2.13.5",
+    "httpx==0.28.1",
+    "feedparser==6.0.11",
+    "selectolax==1.0.0",
+    "claude-agent-sdk==0.2.163",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==8.3.5",
+    "pytest-asyncio==0.25.3",
+]
+
+[project.scripts]
+swingtrade = "app.main:run"
+
+[tool.hatch.build.targets.wheel]
+packages = ["app"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+markers = [
+    "live: exercises a real network call to the Claude Agent SDK; requires `claude login` and SWINGTRADE_RUN_LIVE_HAIKU_TEST=1; skipped by default and never run in CI.",
+]
